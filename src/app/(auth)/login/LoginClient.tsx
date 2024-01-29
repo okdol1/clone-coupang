@@ -11,6 +11,7 @@ import AutoSignInCheckbox from "@/components/autoSignInCheckbox/AutoSignInCheckb
 import Divider from "@/components/divider/Divider";
 import Button from "@/components/button/Button";
 import Link from "next/link";
+import { toast } from "react-toastify";
 
 const LoginClient = () => {
   const [email, setEmail] = useState("");
@@ -26,6 +27,7 @@ const LoginClient = () => {
 
   const loginUser = (e: FormEvent) => {
     e.preventDefault();
+    toast.info('성공')
     setIsLoading(true);
   };
 
